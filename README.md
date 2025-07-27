@@ -2,7 +2,7 @@
 
 Portfolio website built using HTML5, CSS3, JavaScript, and jQuery.
 
-<a href="https://mohamedabdellatif.netlify.app/" target="_blank">**Visit Now** 🚀</a>
+<a href="https:mohamedabdellatef.me/" target="_blank">**Visit Now** 🚀</a>
 
 ## 📌 Tech Stack
 
@@ -20,5 +20,5 @@ Particle.js, Typed.js, Tilt.js, Scroll Reveal, Font Awesome and JSON
 Feel free to reach me through the below handles if you'd like to contact me.
 
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohamed-abdellatif-/)
-[![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohamedAbdellatif2)
+[![github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MohamedAbdellatif)
 [![kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/mohamedabdellatef22)
