@@ -1645,4 +1645,11 @@ form .button-area {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Center the projects button in mobile view */
+  .home .btn {
+    display: block;
+    margin: 24px auto 0 auto;
+    text-align: center;
+  }
 }
