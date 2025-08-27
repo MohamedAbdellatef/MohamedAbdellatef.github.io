@@ -1646,7 +1646,7 @@ form .button-area {
     align-items: center;
   }
 
-  /* Center the projects button in mobile view */
+  /* Center the "View My Projects" button only on mobile */
   .home .btn {
     display: block;
     margin: 24px auto 0 auto;
