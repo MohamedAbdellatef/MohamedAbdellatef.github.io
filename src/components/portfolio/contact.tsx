@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
 import { z } from "zod";
 import { Section } from "./section";
 import { Input } from "@/components/ui/input";
@@ -25,7 +25,7 @@ export function Contact() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<FormValues>({ resolver: zodResolver(schema) });
+  } = useForm<FormValues>({ resolver: standardSchemaResolver(schema) });
 
   const onSubmit = (values: FormValues) => {
     const subject = encodeURIComponent(`Portfolio inquiry — ${values.name}`);
