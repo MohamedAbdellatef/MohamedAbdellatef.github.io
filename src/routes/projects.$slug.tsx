@@ -42,7 +42,8 @@ export const Route = createFileRoute("/projects/$slug")({
 });
 
 function ProjectPage() {
-  const { project: p } = Route.useLoaderData();
+  const data = Route.useLoaderData() as { project: Project };
+  const p = data.project;
   return (
     <article>
       <div className="border-b border-border bg-hero">
