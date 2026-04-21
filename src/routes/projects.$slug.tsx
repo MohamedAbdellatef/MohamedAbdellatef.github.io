@@ -1,13 +1,15 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
-import { projects } from "@/data/site";
+import { projects, type Project } from "@/data/site";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
-    const project = projects.find((p) => p.slug === params.slug);
+    const project: Project | undefined = projects.find(
+      (p) => p.slug === params.slug,
+    );
     if (!project) throw notFound();
-    return { project };
+    return { project: project as Project };
   },
   head: ({ loaderData }) => ({
     meta: loaderData
