@@ -52,7 +52,7 @@ function ProjectPage() {
             <ArrowLeft className="h-3.5 w-3.5" /> All projects
           </Link>
           <div className="mt-4 flex flex-wrap gap-2">
-            {p.categories.map((c) => (
+            {p.categories.map((c: string) => (
               <span key={c} className="rounded-full border border-border bg-card px-2.5 py-0.5 text-xs">
                 {c}
               </span>
@@ -83,7 +83,7 @@ function ProjectPage() {
       <div className="mx-auto max-w-4xl px-6 py-12">
         {p.metrics && (
           <div className="mb-10 grid gap-3 sm:grid-cols-3">
-            {p.metrics.map((m) => (
+            {p.metrics.map((m: { label: string; value: string }) => (
               <div key={m.label} className="rounded-xl border border-border bg-card p-5 text-center">
                 <p className="text-2xl font-bold text-gradient">{m.value}</p>
                 <p className="mt-1 font-mono text-xs uppercase tracking-wider text-muted-foreground">
@@ -100,7 +100,7 @@ function ProjectPage() {
         <div className="mt-10">
           <h2 className="font-mono text-xs uppercase tracking-wider text-primary">// architecture</h2>
           <ol className="mt-3 space-y-2">
-            {p.architecture.map((a, i) => (
+            {p.architecture.map((a: string, i: number) => (
               <li key={i} className="flex gap-3 rounded-lg border border-border bg-card p-3 text-sm">
                 <span className="font-mono text-primary">{String(i + 1).padStart(2, "0")}</span>
                 <span>{a}</span>
@@ -112,7 +112,7 @@ function ProjectPage() {
         <div className="mt-10">
           <h2 className="font-mono text-xs uppercase tracking-wider text-primary">// stack</h2>
           <div className="mt-3 flex flex-wrap gap-2">
-            {p.stack.map((s) => (
+            {p.stack.map((s: string) => (
               <span key={s} className="rounded-md border border-border bg-secondary/60 px-2.5 py-1 text-xs font-medium">
                 {s}
               </span>
@@ -124,7 +124,7 @@ function ProjectPage() {
           <div>
             <h2 className="font-mono text-xs uppercase tracking-wider text-primary">// outcomes</h2>
             <ul className="mt-3 space-y-2 text-sm">
-              {p.outcomes.map((o) => (
+              {p.outcomes.map((o: string) => (
                 <li key={o} className="flex gap-2"><span className="text-primary">▹</span>{o}</li>
               ))}
             </ul>
@@ -132,7 +132,7 @@ function ProjectPage() {
           <div>
             <h2 className="font-mono text-xs uppercase tracking-wider text-primary">// challenges</h2>
             <ul className="mt-3 space-y-2 text-sm">
-              {p.challenges.map((c) => (
+              {p.challenges.map((c: string) => (
                 <li key={c} className="flex gap-2"><span className="text-primary">▹</span>{c}</li>
               ))}
             </ul>
