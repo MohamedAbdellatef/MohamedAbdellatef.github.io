@@ -1,6 +1,11 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { ThemeProvider } from "@/components/portfolio/theme-provider";
+import { Header } from "@/components/portfolio/header";
+import { Footer } from "@/components/portfolio/footer";
+import { ScrollProgress } from "@/components/portfolio/scroll-progress";
+import { BackToTop } from "@/components/portfolio/back-to-top";
 
 function NotFoundComponent() {
   return (
@@ -29,19 +34,33 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Junior Data Engineer · Portfolio · UAE" },
+      {
+        name: "description",
+        content:
+          "Portfolio of a junior data engineer based in the UAE — Python, SQL, ETL/ELT, dbt, Airflow, and cloud warehousing projects.",
+      },
+      { name: "theme-color", content: "#0e1622" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap",
       },
     ],
   }),
@@ -65,5 +84,15 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <ThemeProvider>
+      <ScrollProgress />
+      <Header />
+      <main className="min-h-[60vh]">
+        <Outlet />
+      </main>
+      <Footer />
+      <BackToTop />
+    </ThemeProvider>
+  );
 }
