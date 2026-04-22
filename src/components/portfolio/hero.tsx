@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { site } from "@/data/site";
+import profilePhoto from "@/assets/profile.png";
 
 export function Hero() {
   return (
@@ -81,35 +82,20 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative rounded-xl border border-border/80 bg-card/60 p-1 shadow-elegant backdrop-blur"
+            className="relative mx-auto w-full max-w-sm"
           >
-            <div className="flex items-center gap-1.5 border-b border-border/60 px-3 py-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
-              <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/70" />
-              <span className="ml-2 font-mono text-[11px] text-muted-foreground">
-                ~/pipelines/health.sh
-              </span>
+            <div
+              aria-hidden
+              className="absolute -inset-4 rounded-2xl bg-gradient-to-br from-primary/30 via-primary/10 to-transparent blur-2xl"
+            />
+            <div className="relative overflow-hidden rounded-2xl border border-border/80 bg-card/60 shadow-elegant backdrop-blur">
+              <img
+                src={profilePhoto}
+                alt={`${site.name} — ${site.role}`}
+                className="h-auto w-full object-cover"
+                loading="eager"
+              />
             </div>
-            <pre className="overflow-x-auto p-4 text-[12.5px] leading-relaxed">
-              <code className="font-mono">
-                <span className="text-muted-foreground">$</span>{" "}
-                <span className="text-foreground">airflow dags list-runs --state success</span>
-                {"\n"}
-                <span className="text-emerald-500">✓</span> dag_sales_etl       last_run=01:14 UTC
-                {"\n"}
-                <span className="text-emerald-500">✓</span> dag_dbt_marts       last_run=01:32 UTC
-                {"\n"}
-                <span className="text-emerald-500">✓</span> dag_api_ingest      last_run=02:00 UTC
-                {"\n\n"}
-                <span className="text-muted-foreground">$</span>{" "}
-                <span className="text-foreground">dbt build --select marts</span>
-                {"\n"}
-                <span className="text-primary">PASS</span> 62 models · 184 tests · 0 failures
-                {"\n"}
-                <span className="text-muted-foreground">// shipping data products since 2023</span>
-              </code>
-            </pre>
           </motion.div>
         </div>
       </div>
