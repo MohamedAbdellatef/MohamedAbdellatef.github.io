@@ -18,7 +18,7 @@ export function Hero() {
         >
           <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />
           <span className="font-mono text-muted-foreground">
-            available for junior data engineering roles · {site.location}
+            available for junior data engineering roles
           </span>
         </motion.div>
 
