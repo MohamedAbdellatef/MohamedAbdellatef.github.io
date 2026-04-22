@@ -10,20 +10,20 @@ export function Hero() {
     <section className="relative overflow-hidden bg-hero">
       <div className="absolute inset-0 bg-grid" aria-hidden />
       <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-24 pt-20 md:pt-28">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex w-fit items-center gap-2 rounded-full border border-border/80 bg-card/60 px-3 py-1 text-xs backdrop-blur"
-        >
-          <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-          <span className="font-mono text-muted-foreground">
-            available for junior data engineering roles
-          </span>
-        </motion.div>
-
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-center">
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-border/80 bg-card/60 px-3 py-1 text-[11px] backdrop-blur"
+            >
+              <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="font-mono text-muted-foreground">
+                open to junior roles
+              </span>
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="mt-8 flex flex-wrap gap-3"
+              className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start"
             >
               <Button asChild size="lg" className="gap-2">
                 <Link to="/projects">
