@@ -1,0 +1,1 @@
+import{j as e,L as r}from"./index-CzDPekzC.js";const o=({error:t})=>e.jsxs("div",{className:"mx-auto max-w-2xl px-6 py-24 text-center",children:[e.jsx("p",{className:"text-destructive",children:t.message}),e.jsx(r,{to:"/projects",className:"mt-4 inline-block text-primary hover:underline",children:"Back to projects"})]});export{o as errorComponent};

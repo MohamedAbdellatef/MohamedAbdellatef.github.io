@@ -86,13 +86,14 @@ document.addEventListener('visibilitychange',
 
 
 // <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: ["Data Engineer", "Big Data Engineer"],
-    loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
-});
+if (document.querySelector(".typing-text")) {
+    new Typed(".typing-text", {
+        strings: ["Junior Data Engineer"],
+        loop: false,
+        typeSpeed: 45,
+        showCursor: false,
+    });
+}
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
@@ -215,17 +216,15 @@ const srtop = ScrollReveal({
 });
 
 /* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
-
-srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
+srtop.reveal('.home .home-badge', { delay: 120 });
+srtop.reveal('.home .home-name', { delay: 180 });
+srtop.reveal('.home .home-role', { delay: 220 });
+srtop.reveal('.home .home-summary', { delay: 260 });
+srtop.reveal('.home .home-meta', { delay: 300 });
+srtop.reveal('.home .home-cta', { delay: 340 });
+srtop.reveal('.home .home-proof', { delay: 380 });
+srtop.reveal('.home .home-links', { delay: 420 });
+srtop.reveal('.home .home-visual', { delay: 320 });
 
 /* SCROLL ABOUT */
 srtop.reveal('.about .content h3', { delay: 200 });
