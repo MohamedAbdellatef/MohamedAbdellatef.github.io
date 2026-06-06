@@ -160,18 +160,20 @@ srtop.reveal('.about .about-metrics', { delay: 380 });
 
 
 /* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
+srtop.reveal('.skills .section-intro', { delay: 180 });
+srtop.reveal('.skills .skills-shell', { delay: 260 });
+srtop.reveal('.skills .skill-card', { interval: 90, delay: 320 });
 
 /* SCROLL EDUCATION */
-srtop.reveal('.education .box', { interval: 200 });
+srtop.reveal('.education .section-intro', { delay: 180 });
+srtop.reveal('.education .education-card', { delay: 280 });
 
 /* SCROLL PROJECTS */
 srtop.reveal('.projects .project-card-featured', { interval: 180 });
 
 /* SCROLL EXPERIENCE */
-srtop.reveal('.experience .timeline', { delay: 400 });
-srtop.reveal('.experience .timeline .container', { interval: 400 });
+srtop.reveal('.experience .section-intro', { delay: 180 });
+srtop.reveal('.experience .experience-card', { interval: 180, delay: 280 });
 
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
